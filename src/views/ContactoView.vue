@@ -1,7 +1,16 @@
 <template lang="">
-  <div></div>
+  <div>
+    <FormContacto />
+  </div>
 </template>
 <script>
-export default {};
+import FormContacto from "@/components/FormContacto.vue";
+
+export default {
+  name: "ContactView",
+  components: {
+    FormContacto,
+  },
+};
 </script>
 <style lang=""></style>
