@@ -2,7 +2,7 @@
   <div class="sticky-top">
     <!-- boton de menu lateral -->
     <div
-      class="w-100 d-flex justify-content-end align-items-center bg-light p-2"
+      class="w-100 d-flex justify-content-end align-items-center bg-light p-3"
     >
       <BarsBtn />
     </div>

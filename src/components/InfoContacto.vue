@@ -14,11 +14,11 @@
         (sitio, producto, servicio, etc).
       </div>
 
-      <hr class="border-danger" />
+      <hr />
 
       <div class="fs-6">
         Revisa nuestras redes sociales para mayor información y para mantenerte
-        al día con nuestras novedades
+        al día con nuestras novedades.
       </div>
 
       <div class="d-flex flex-row justify-content-evenly">
@@ -33,9 +33,11 @@
         ></a>
       </div>
 
-      <hr class="border-danger" />
+      <hr />
 
-      <div>También puedes contactarnos a través de estos canales</div>
+      <div class="text-center">
+        También puedes contactarnos a través de estos canales.
+      </div>
 
       <div class="d-flex flex-row justify-content-evenly">
         <a href="#" class="rs-icon"
@@ -49,7 +51,7 @@
       <div class="fs-6">
         ¡Gracias por visitar nuestro sitio! El equipo
         <router-link to="/" class="text-danger">Dwepps®</router-link> agradece
-        tu aporte.
+        tu aporte, que nos ayudará a mejorar.
       </div>
     </div>
 
@@ -134,5 +136,9 @@ export default {};
 
 hr {
   box-shadow: 0 0 10px 3px rgba($color: red, $alpha: 0.8);
+  border-color: white;
+  border-width: 2px;
+  border-radius: 1em;
+  opacity: 1;
 }
 </style>
