@@ -1,7 +1,7 @@
 <template lang="">
   <div>
     <a
-      class="btn btn-outline-dark p-0 m-0"
+      class="btn p-0 m-0"
       data-bs-toggle="offcanvas"
       href="#sidemenu"
       role="button"
@@ -22,13 +22,26 @@
 export default {};
 </script>
 <style lang="scss" scoped>
+.btn {
+  border: 1px solid dark;
+  background: var(--bs-dark);
+  border-radius: 0.2em;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: rotate(225deg);
+    box-shadow: 0 0 10px 2px rgba($color: #000000, $alpha: 0.8);
+  }
+}
+
 .barras {
   .barra {
     width: 80%;
     height: 0.25em;
-    border: 1px solid #000;
+    // border: 1px solid #000;
+    background-color: var(--bs-light);
     position: absolute;
-    border-radius: 20em;
+    border-radius: 0.2em;
     transition: all 0.2s ease-in-out;
   }
   #barra1 {
@@ -53,8 +66,9 @@ export default {};
     //   transform: rotate(-45deg);
     //   bottom: auto;
     // }
+
     .barra {
-      border-color: var(--bs-danger);
+      background-color: var(--bs-danger);
     }
   }
 }
