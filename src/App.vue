@@ -31,4 +31,9 @@ a {
   color: var(--bs-danger);
   font-weight: bold;
 }
+.off {
+  opacity: 0.6; /* Opacidad reducida */
+  pointer-events: none; /* Desactiva los eventos de puntero */
+  user-select: none; /* Evita la selección de texto */
+}
 </style>
