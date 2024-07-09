@@ -186,8 +186,9 @@ form {
 
     label {
       left: 1em;
-      top: 0.6em;
+      top: 0.8em;
       z-index: 0;
+      font-size: 0.9em;
     }
 
     input,

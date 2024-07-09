@@ -1,8 +1,8 @@
 <template>
-  <div class="sticky-top">
+  <div class="sticky-t">
     <!-- boton de menu lateral -->
     <div
-      class="w-100 d-flex justify-content-end align-items-center bg-light p-3"
+      class="w-100 d-flex justify-content-end align-items-center p-3 head-menu"
     >
       <BarsBtn />
     </div>
@@ -125,6 +125,18 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.sticky-t {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.head-menu {
+  background-color: rgba($color: #000000, $alpha: 0.1);
+}
+
 .lista {
   padding: 0.3em 0.7em;
   display: flex;
