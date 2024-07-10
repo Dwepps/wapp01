@@ -36,4 +36,27 @@ a {
   pointer-events: none; /* Desactiva los eventos de puntero */
   user-select: none; /* Evita la selección de texto */
 }
+
+.img-show {
+  view-timeline-name: --image;
+  view-timeline-area: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
 </style>

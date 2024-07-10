@@ -25,7 +25,7 @@
               </div>
             </div>
             <div class="titulo-slide fs-3 fw-bold">HTML5</div>
-            <div class="btn btn-outline-light off">Más informacion</div>
+            <div class="btn btn-outline-light off">Más información</div>
           </div>
         </div>
 
@@ -42,7 +42,7 @@
               </div>
             </div>
             <div class="titulo-slide fs-3 fw-bold">CSS3</div>
-            <div class="btn btn-outline-light off">Más informacion</div>
+            <div class="btn btn-outline-light off">Más información</div>
           </div>
         </div>
 
@@ -50,22 +50,23 @@
           <div class="container">
             <div class="info-container">
               <div class="info-slide">
-                Experiencia confortante, es la que permite entregar el lenguaje
-                de programación JavaScript. Algo muy importante y necesario para
-                poder destacar y hacer que los usuarios se sientan cómodos a la
-                hora de navegar en el sitio web.
+                <div>
+                  Experiencia confortante, es la que permite entregar el
+                  lenguaje de programación JavaScript. Algo muy importante y
+                  necesario para poder destacar y hacer que los usuarios se
+                  sientan cómodos a la hora de navegar en el sitio web.
+                </div>
               </div>
               <div class="img-slide">
                 <i class="fa-brands fa-js"></i>
               </div>
             </div>
             <div class="titulo-slide fs-3 fw-bold">JavaScript</div>
-            <div class="btn btn-outline-light off">Más informacion</div>
+            <div class="btn btn-outline-light off">Más información</div>
           </div>
         </div>
       </div>
     </div>
-    <div class="vh-100 w-100 p-0 m-0"></div>
   </div>
 </template>
 <script>
@@ -183,21 +184,36 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 100%;
+
+    @media (max-width: 575px) {
+      width: 1.5em;
+      height: 1.5em;
+    }
 
     &.prev {
       left: 0;
       margin-left: 1.1em;
+      @media (max-width: 575px) {
+        margin-left: 0.5em;
+      }
     }
 
     &.next {
       right: 0;
       margin-right: 1.1em;
+      @media (max-width: 575px) {
+        margin-right: 0.5em;
+      }
     }
 
     &:hover {
+      border-radius: 0.5em;
       background-color: var(--bs-danger);
-      border-radius: 100%;
-      box-shadow: 0 0 10px 3px rgba($color: #000000, $alpha: 0.5);
+
+      @media (max-width: 575px) {
+        border-radius: 0.2em;
+      }
     }
   }
 
@@ -214,13 +230,12 @@ export default {
       border-radius: 100%;
       width: 1em;
       height: 1em;
-      border: 1px solid var(--bs-light);
+      background-color: var(--bs-light);
       transition: all 0.5s ease;
 
       &:hover {
         background-color: var(--bs-danger);
-        border-color: var(--bs-danger);
-        box-shadow: 0 0 10px 3px rgba($color: #ffffff, $alpha: 0.5);
+        border-radius: 0.1em;
       }
     }
   }
@@ -279,8 +294,8 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2em;
-        padding: 3.5em;
+        gap: 1em;
+        padding: 1em;
         box-shadow: 0 0 10px 3px rgba($color: #000000, $alpha: 0.7);
         border-radius: 0.4em;
         background-color: rgba($color: #000000, $alpha: 0.5);
@@ -291,8 +306,8 @@ export default {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        gap: 3em;
-        padding: 1em;
+        gap: 2em;
+        padding: 0.5em;
 
         @media (min-width: 576px) {
           flex-direction: row; // Aplica directamente sobre .info-container en la media query
@@ -312,11 +327,19 @@ export default {
         }
 
         .info-slide {
+          width: min(250px, 75%);
+          height: 200px;
+          font-size: 0.8em;
           color: var(--bs-light);
+          overflow: hidden;
+          // white-space: nowrap;
+          text-overflow: ellipsis;
+          line-clamp: 3;
+          box-orient: vertical;
 
-          @media (max-width: 350px) {
-            font-size: 0.8em;
-          }
+          // @media (max-width: 575px) {
+          //   font-size: 0.8em;
+          // }
         }
       }
 
@@ -325,7 +348,7 @@ export default {
       }
 
       .btn {
-        @media (max-width: 350px) {
+        @media (max-width: 575px) {
           transform: scale(0.9);
         }
       }

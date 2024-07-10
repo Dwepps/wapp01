@@ -3,7 +3,12 @@
     <div class="logo-container">
       <div class="logo">Dwepps®</div>
     </div>
+
     <HomeSlider />
+
+    <div class="vh-100 w-100 d-flex justify-content-center align-items-center">
+      <div class></div>
+    </div>
   </div>
 </template>
 <script>
