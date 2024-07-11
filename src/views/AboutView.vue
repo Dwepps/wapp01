@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div class="vista ss-child-start"></div>
 </template>
 <script>
 export default {};

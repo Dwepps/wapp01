@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="ss-child-start">
+  <div class="ss-child-start vista">
     <div
       class="el-1 d-flex flex-column-reverse flex-lg-row justify-content-center align-items-center"
     >

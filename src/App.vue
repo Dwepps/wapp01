@@ -65,6 +65,11 @@ html {
   scroll-snap-align: end;
 }
 
+.vista {
+  width: 100%;
+  height: 100vh;
+}
+
 @keyframes show {
   from {
     opacity: 0;
