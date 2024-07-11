@@ -1,13 +1,17 @@
 <template>
   <NaveMenu />
   <router-view />
+  <MainFooter />
 </template>
 <script>
 import NaveMenu from "@/components/NavMenu.vue";
+import MainFooter from "@/components/MainFooter.vue";
+
 export default {
   name: "App",
   components: {
     NaveMenu,
+    MainFooter,
   },
 };
 </script>
