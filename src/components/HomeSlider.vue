@@ -165,7 +165,7 @@ export default {
 <style lang="scss" scoped>
 .home-slider {
   width: 100%;
-  height: 700px;
+  height: 100vh;
   position: relative;
 
   a.control {
@@ -332,10 +332,10 @@ export default {
           font-size: 0.8em;
           color: var(--bs-light);
           overflow: hidden;
-          // white-space: nowrap;
-          text-overflow: ellipsis;
-          line-clamp: 3;
-          box-orient: vertical;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
 
           // @media (max-width: 575px) {
           //   font-size: 0.8em;

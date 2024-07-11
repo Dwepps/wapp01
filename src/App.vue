@@ -49,14 +49,26 @@ a {
   animation-timeline: --image;
   animation-name: show;
 
-  animation-range: entry 25% cover 30%;
+  animation-range: entry 20% cover 30%;
   animation-fill-mode: both;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.ss-child-start {
+  scroll-snap-align: start;
+}
+.ss-child-end {
+  scroll-snap-align: end;
 }
 
 @keyframes show {
   from {
     opacity: 0;
-    scale: 25%;
+    scale: 20%;
   }
 
   to {

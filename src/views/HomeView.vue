@@ -1,12 +1,14 @@
 <template lang="">
+  <div class="logo-container">
+    <div class="logo">Dwepps®</div>
+  </div>
+
   <div class="main">
-    <div class="logo-container">
-      <div class="logo">Dwepps®</div>
+    <div class="full-screen ss-child-start">
+      <HomeSlider />
     </div>
 
-    <HomeSlider />
-
-    <div class="main-1">
+    <div class="main-1 full-screen ss-child-start">
       <div class="section-1">
         <div class="el-1">
           <div class="img-section img-1 img-show">
@@ -41,25 +43,19 @@
                 equipo de trabajo, etc.
               </li>
             </ul>
+            Al brindar información completa y transparente, permites que los
+            usuarios conozcan a fondo lo que ofreces, generando confianza y
+            acercamiento hacia tu marca. De esta manera, con solo visitar tu
+            sitio web, puedes captar la atención de clientes potenciales e
+            incrementar las posibilidades de conversión.
           </div>
         </div>
       </div>
-
-      <div class="section-2">
-        <div class="el-3 d-flex flex-column gap-3">
-          Al brindar información completa y transparente, permites que los
-          usuarios conozcan a fondo lo que ofreces, generando confianza y
-          acercamiento hacia tu marca. De esta manera, con solo visitar tu sitio
-          web, puedes captar la atención de clientes potenciales e incrementar
-          las posibilidades de conversión. Invertir en un sitio web informativo
-          es una inversión inteligente que te ayudará a alcanzar tus objetivos
-          de negocio.
-          <br /><br />
-          Invertir en un sitio web informativo es una inversión inteligente que
-          te ayudará a alcanzar tus objetivos de negocio.
-        </div>
-      </div>
     </div>
+
+    <div class="full-screen ss-child-start bg-danger"></div>
+    <div class="full-screen ss-child-start bg-success"></div>
+    <div class="full-screen ss-child-start bg-primary"></div>
   </div>
 </template>
 <script>
@@ -108,23 +104,17 @@ export default {
 }
 
 .main {
-  scroll-snap-type: y mandatory;
+  .full-screen {
+    // width: 100%;
+    min-height: 100dvh;
+  }
 
   .main-1 {
-    position: sticky;
-    top: 0;
-    scroll-snap-align: center;
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
-    // * {
-    //   border: 1px solid black;
-    // }
 
     .section-1 {
       width: min(1280px, 100%);
