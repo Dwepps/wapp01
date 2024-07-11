@@ -1,13 +1,66 @@
 <template lang="">
-  <div>
+  <div class="main">
     <div class="logo-container">
       <div class="logo">Dwepps®</div>
     </div>
 
     <HomeSlider />
 
-    <div class="vh-100 w-100 d-flex justify-content-center align-items-center">
-      <div class></div>
+    <div
+      class="main-1 p-0 m-0 vh-100 w-100 d-flex flex-column justify-content-center align-items-center overflow-hidden"
+    >
+      <div class="section-1">
+        <div class="el-1">
+          <div class="img-section img-1 img-show">
+            <img src="../assets/img/home_content/mockup_web_01.jpeg" alt="" />
+          </div>
+
+          <div class="img-section img-2 img-show">
+            <img src="../assets/img/home_content/boceto_web_01.png" alt="" />
+          </div>
+        </div>
+
+        <div class="el-2">
+          <div class="sel-2">
+            <i class="fs-3 fw-bold text-danger">
+              ¡Presencia a nivel nacional y mundial!
+            </i>
+            Atrae clientes potenciales y fideliza a los existentes con un sitio
+            web informativo
+            <br />
+            Un sitio web bien diseñado es una herramienta fundamental para
+            potenciar la visibilidad de tu negocio, generar confianza y
+            fidelizar a tus clientes. A través de él, puedes compartir
+            información relevante como:
+
+            <ul class="">
+              <li>
+                Ubicación: País, ciudad y dirección física (si corresponde).
+              </li>
+              <li>Oferta: Productos, servicios y sus precios.</li>
+              <li>
+                Información adicional: Datos de contacto, misión, valores,
+                equipo de trabajo, etc.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-2">
+        <div class="el-3 d-flex flex-column gap-3">
+          Al brindar información completa y transparente, permites que los
+          usuarios conozcan a fondo lo que ofreces, generando confianza y
+          acercamiento hacia tu marca. De esta manera, con solo visitar tu sitio
+          web, puedes captar la atención de clientes potenciales e incrementar
+          las posibilidades de conversión. Invertir en un sitio web informativo
+          es una inversión inteligente que te ayudará a alcanzar tus objetivos
+          de negocio.
+          <br /><br />
+          Invertir en un sitio web informativo es una inversión inteligente que
+          te ayudará a alcanzar tus objetivos de negocio.
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -52,6 +105,124 @@ export default {
 
     @media (max-width: 575px) {
       font-size: 1.2em;
+    }
+  }
+}
+
+.main {
+  scroll-snap-type: y mandatory;
+
+  .main-1 {
+    position: sticky;
+    top: 0;
+    scroll-snap-align: center;
+
+    // * {
+    //   border: 1px solid black;
+    // }
+
+    .section-1 {
+      width: min(1280px, 100%);
+      display: flex;
+      // flex-direction: row;
+
+      @media (max-width: 990px) {
+        flex-direction: column;
+      }
+
+      // imagenes
+      .el-1 {
+        position: relative;
+        min-width: 300px;
+        width: 50%;
+        height: 400px;
+
+        @media (max-width: 990px) {
+          width: 100%;
+        }
+
+        .img-section {
+          width: 100%;
+          box-shadow: 0 0 10px 2px rgba($color: #000000, $alpha: 0.7);
+          position: absolute;
+          transition: all 0.5s ease;
+          border-radius: 0.5em;
+          overflow: hidden;
+
+          @media (max-width: 400px) {
+            border-radius: 0;
+            position: initial;
+          }
+
+          &.img-1 {
+            height: 100%;
+            @media (min-width: 401px) and (max-width: 575px) {
+              transform: translate(0%, -50%);
+            }
+          }
+          &.img-2 {
+            width: min(400px, 100%);
+            z-index: 1;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media (max-width: 400px) {
+              top: 0;
+              left: 0%;
+              transform: translate(0%, 0%);
+            }
+            @media (max-width: 575px) {
+              top: 75%;
+            }
+
+            img {
+              transform: scale(1.04);
+            }
+          }
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      // texto
+      .el-2 {
+        min-width: 300px;
+        width: 50%;
+        margin: auto;
+        // padding-left: 2em;
+        // padding-right: 2em;
+
+        @media (max-width: 990px) {
+          width: min(1280px, 90%);
+        }
+
+        .sel-2 {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          padding: 1em;
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    .section-2 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .el-3 {
+        width: min(1280px, 90%);
+        padding: 1em;
+        font-size: 0.9em;
+      }
     }
   }
 }

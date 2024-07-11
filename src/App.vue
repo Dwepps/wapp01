@@ -20,6 +20,7 @@ export default {
 }
 body {
   background-color: var(--bs-light);
+  scroll-behavior: smooth;
 }
 a {
   color: var(--bs-dark);
