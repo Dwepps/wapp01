@@ -6,9 +6,7 @@
 
     <HomeSlider />
 
-    <div
-      class="main-1 p-0 m-0 vh-100 w-100 d-flex flex-column justify-content-center align-items-center overflow-hidden"
-    >
+    <div class="main-1">
       <div class="section-1">
         <div class="el-1">
           <div class="img-section img-1 img-show">
@@ -116,6 +114,13 @@ export default {
     position: sticky;
     top: 0;
     scroll-snap-align: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
     // * {
     //   border: 1px solid black;
@@ -124,6 +129,7 @@ export default {
     .section-1 {
       width: min(1280px, 100%);
       display: flex;
+      gap: 2em;
       // flex-direction: row;
 
       @media (max-width: 990px) {
@@ -150,14 +156,16 @@ export default {
           overflow: hidden;
 
           @media (max-width: 400px) {
-            border-radius: 0;
             position: initial;
           }
 
           &.img-1 {
             height: 100%;
-            @media (min-width: 401px) and (max-width: 575px) {
+            @media (max-width: 575px) {
               transform: translate(0%, -50%);
+            }
+            @media (max-width: 990px) {
+              border-radius: 0;
             }
           }
           &.img-2 {
